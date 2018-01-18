@@ -1,0 +1,1000 @@
+  702  cd etc/
+  703  l
+  704  grep wave
+  705  cd Documents/Android/
+  706  l
+  707  xdg-open Common\ Android\ Views\ Cheat\ Sheet.pdf 
+  708  man xdg-open
+  709  man xdg
+  710  man xdg-open 
+  711  ls
+  712  cd Documents
+  713  l
+  714  cd Documents/
+  715  l
+  716  cd Fixing-Wi-Fi-Drivers/
+  717  l
+  718  xdg-open step-by-step-plus-links-guide 
+  719  iwconfig
+  720  l
+  721  cd rtlwifi_new-master/
+  722  l
+  723  sudo modprobe -rv rtl8723be
+  724  sudo modprobe -v rtl8723be ant_sel=2
+  725  sudo ip link set wlan0 up
+  726  sudo iw dev wlan0 scan
+  727  sudo make install
+  728  sudo modprobe -rv rtl8723be
+  729  sudo modprobe -v rtl8723be ant_sel=2
+  730  sudo ip link set wlan0 up
+  731  sudo iw dev wlan0 scan
+  732  echo "options rtl8723be ant_sel=2" | sudo tee /etc/modprobe.d/50-rtl8723be.conf
+  733  ping google.com
+  734  cd Downloads/
+  735  l
+  736  tar -xzf GoLand-2017.3.tar.gz
+  737  tar -xzf goland-2017.3.tar.gz
+  738  l
+  739  cd ..
+  740  l
+  741  ls Android/
+  742  pwd
+  743  ls
+  744  cd Android/Sdk/
+  745  l
+  746  cd ..
+  747  l
+  748  cd ..
+  749  l
+  750  cd ..
+  751  l
+  752  cd usr/
+  753  l
+  754  cd local
+  755  l
+  756  ls /home/
+  757  ls /home/eugenio/
+  758  ls
+  759  cd bin/
+  760  l
+  761  cd ..
+  762  cd etc/
+  763  l
+  764  cd ../games/
+  765  l
+  766  cd ../include/
+  767  l
+  768  cd ../lib/
+  769  l
+  770  cd ..
+  771  cd man/
+  772  l
+  773  cd ..
+  774  ls sbin/
+  775  ls share/
+  776  ls src/
+  777  ls
+  778  cd android-studio/
+  779  l
+  780  cd bin/
+  781  l
+  782  cd ~/
+  783  cd Downloads/
+  784  mv GoLand-2017.3/ /usr/local/
+  785  ls ~/
+  786  l
+  787  sudo mv GoLand-2017.3/ /usr/local/
+  788  man tar
+  789  tar -xfz Popcorn-Time-linux64.tar.gz 
+  790  l
+  791  sudo tar -xfz Popcorn-Time-linux64.tar.gz 
+  792  man tar
+  793  sudo tar -xz Popcorn-Time-linux64.tar.gz 
+  794  cd Documents/
+  795  l
+  796  cd ..
+  797  cd Downloads/
+  798  l
+  799  cd Popcorn-Time/
+  800  l
+  801  cd ..
+  802  ls ~/
+  803  mv Popcorn-Time /usr/local/
+  804  sudo mv Popcorn-Time /usr/local/
+  805  cd /usr/local
+  806  l
+  807  cd Popcorn-Time/
+  808  l
+  809  ./Popcorn-Time 
+  810  sudo ./Popcorn-Time 
+  811  cd ~/
+  812  l
+  813  cd /
+  814  ls
+  815  cd usr/
+  816  l
+  817  cd local
+  818  l
+  819  cd bin/
+  820  l
+  821  cd ..
+  822  cd etc/
+  823  l
+  824  cd ..
+  825  l
+  826  cd ..
+  827  cd usr/src/
+  828  l
+  829  cd ..
+  830  ls
+  831  ls opt/
+  832  ls root/
+  833  ls lib
+  834  l
+  835  ls etc/
+  836  l
+  837  cd ~/
+  838  l
+  839  cd go/
+  840  l
+  841  cd ~/Documents/
+  842  l
+  843  cd ..
+  844  cat .profile 
+  845  man apt-get
+  846  go --version
+  847  go help gopath
+  848  sudo apt list --installed
+  849  sudo apt-get purge golang-go
+  850  sudo apt list --installed
+  851  sudo apt-get purge golang-1.6-go 
+  852  sudo apt-get purge golang-1.6-race-detector-runtime 
+  853  sudo apt-get purge golang-1.6-src 
+  854  sudo apt-get purge golang-1.9-go 
+  855  sudo apt-get purge golang-1.9-src 
+  856  cd /home/
+  857  l
+  858  cd eugenio/
+  859  l
+  860  cd /opt/
+  861  l
+  862  cd /usr/local
+  863  l
+  864  cd GoLand-2017.3/
+  865  l
+  866  cd bin/
+  867  l
+  868  cd ..
+  869  l
+  870  cd jre64/
+  871  l
+  872  cd bin/
+  873  l
+  874  cd ..
+  875  l
+  876  cd lib/
+  877  l
+  878  cd ..
+  879  l
+  880  cd ..
+  881  l
+  882  cd lib/
+  883  l
+  884  cd ..
+  885  l
+  886  cd ~/Downloads/
+  887  l
+  888  tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz 
+  889  sudo tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz 
+  890  cd ..
+  891  sudo vim .profile 
+  892  cd ~/
+  893  cd go/src/hello/
+  894  l
+  895  cat hello.go 
+  896  go build
+  897  source /home/eugenio/.profile 
+  898  go build
+  899  go --version
+  900  go version
+  901  apt list --installed 
+  902  ls
+  903  ./hello 
+  904  cd /usr/local
+  905  l
+  906  cd Popcorn-Time/
+  907  l
+  908  sudo ./install
+  909  sudo ./Popcorn-Time 
+  910  cd /opt/
+  911  l
+  912  cd epson-inkjet-printer-escpr/
+  913  l
+  914  ls /usr/local
+  915  cd ..
+  916  l
+  917  cd /usr/local
+  918  l
+  919  sudo mv Popcorn-Time/ /opt/
+  920  cd /opt/
+  921  l
+  922  rm -r Popcorn-Time/
+  923  sudo rm -r Popcorn-Time/
+  924  l
+  925  sudo mkdir Popcorn-Time
+  926  l
+  927  ls ~/Downloads/
+  928  sudo tar Jfx ~/Downloads/Popcorn-Time-linux64.tar.gz -c /opt/Popcorn-Time/
+  929  sudo tar -Jfx ~/Downloads/Popcorn-Time-linux64.tar.gz -c /opt/Popcorn-Time/
+  930  l
+  931  cd Popcorn-Time/
+  932  l
+  933  cd .
+  934  ls
+  935  cd ..
+  936  ls
+  937  xdg-open x
+  938  ls
+  939  rm x
+  940  sudo rm x
+  941  l
+  942  rmdir Popcorn-Time/
+  943  sudo rmdir Popcorn-Time/
+  944  ls
+  945  sudo mkdir Popcorn-Time
+  946  ls
+  947  cd ~/Downloads/
+  948  l
+  949  sudo tar Jfx ~/Downloads/Popcorn-Time-linux64.tar.gz 
+  950  cd /usr/local
+  951  l
+  952  cd GoLand-2017.3/
+  953  l
+  954  cd help/
+  955  l
+  956  xdg-open ReferenceCard.pdf 
+  957  cd ..
+  958  l
+  959  cd bin/
+  960  l
+  961  cd ..
+  962  l
+  963  xdg-open Install-Linux-tar.txt 
+  964  ls
+  965  cd bin/
+  966  l
+  967  ./goland.sh 
+  968  ls /opt/Popcorn-Time/
+  969  cd Downloads/
+  970  man tar
+  971  sudo tar -xzf Popcorn-Time-linux64.tar.gz -C /opt/Popcorn-Time/
+  972  cd /opt/
+  973  cd Popcorn-Time/
+  974  l
+  975  ls
+  976  sudo ./ Popcorn-Time
+  977  ./Popcorn-Time 
+  978  ls
+  979  cd Popcorn-Time
+  980  ./Popcorn-Time 
+  981  ls
+  982  cd ..
+  983  ls
+  984  sudo rm -r Popcorn-Time/
+  985  ls
+  986  cd ~/Downloads/
+  987  l
+  988  mkdir Popcorn-Time
+  989  l
+  990  tar -xf Popcorn-Time-linux64.tar.gz -c Popcorn-Time
+  991  tar -xf Popcorn-Time-linux64.tar.gz -c ~/Downloads/Popcorn-Time/
+  992  cd /opt/
+  993  l
+  994  sudo mkdir Popcorn-Time
+  995  l
+  996  cd Popcorn-Time/
+  997  l
+  998  sudo wget https://get.popcorntime.sh/build/Popcorn-Time-0.3.10-Linux-64.tar.xz
+  999  ls
+ 1000  sudo tar -xvf Popcorn-Time-0.3.10-Linux-64.tar.xz 
+ 1001  ls
+ 1002  rm Popcorn-Time-0.3.10-Linux-64.tar.xz 
+ 1003  l
+ 1004  ls
+ 1005  ./Popcorn-Time 
+ 1006  ls
+ 1007  cd src/
+ 1008  l
+ 1009  cd app/
+ 1010  l
+ 1011  cd images/
+ 1012  l
+ 1013  sudo vim /usr/share/applications/popcorntime.desktop
+ 1014  cd /opt/Popcorn-Time/
+ 1015  l
+ 1016  go version
+ 1017  cd go/
+ 1018  l
+ 1019  cd src/
+ 1020  l
+ 1021  cd github.com/
+ 1022  l
+ 1023  cd user/
+ 1024  l
+ 1025  cd hello/
+ 1026  l
+ 1027  cd ..
+ 1028  cd user/
+ 1029  l
+ 1030  cd ..
+ 1031  sudo rm -r user/
+ 1032  ls
+ 1033  mkdir eugenioLeal
+ 1034  ls
+ 1035  cd eugenioLeal/
+ 1036  l
+ 1037  ls
+ 1038  mkdir hello
+ 1039  ls
+ 1040  cd hello/
+ 1041  ls
+ 1042  vim hello.go
+ 1043  ls
+ 1044  cd ..
+ 1045  go install github.com/eugenioLeal/hello
+ 1046  go version
+ 1047  source ~/.profile 
+ 1048  go version
+ 1049  go install github.com/eugenioLeal/hello
+ 1050  cd ~/go/bin/
+ 1051  l
+ 1052  ls -la ~/
+ 1053  cat ~/.bash_profile
+ 1054  cat ~/.bashrc
+ 1055  go version
+ 1056  cat ~/.profile
+ 1057  ls
+ 1058  ~/go/bin/hello
+ 1059  vim ~/go/src/github.com/eugenioLeal/hello/hello.go 
+ 1060  ~/go/bin/hello
+ 1061  vim ~/go/src/github.com/eugenioLeal/hello/hello.go 
+ 1062  ~/go/bin/hello
+ 1063  ls
+ 1064  pwd
+ 1065  go version
+ 1066  go install ~/go/src/github.com/eugenioLeal/hello/
+ 1067  cd ~/go/
+ 1068  go install src/github.com/eugenioLeal/hello/
+ 1069  cd src/
+ 1070  go install github.com/eugenioLeal/hello/
+ 1071  ~/go/bin/hello 
+ 1072  hello
+ 1073  echo $GOPATH
+ 1074  echo $PATH
+ 1075  mkdir ~/go/src/github.com/eugenioLeal/stringutil
+ 1076  vim github.com/eugenioLeal/stringutil/reverse.go
+ 1077  go build github.com/eugenioLeal/stringutil/
+ 1078  ls
+ 1079  ls github.com/eugenioLeal/stringutil/
+ 1080  vim github.com/eugenioLeal/hello/hello.go 
+ 1081  go install github.com/eugenioLeal/hello
+ 1082  ~/go/bin/hello 
+ 1083  cd ..
+ 1084  ls pkg/
+ 1085  cd src/
+ 1086  ls
+ 1087  ls ~/go/
+ 1088  cd ..
+ 1089  cd bin/
+ 1090  l
+ 1091  cd ..
+ 1092  cd src/
+ 1093  l
+ 1094  ls ~/go/pkg/linux_amd64/
+ 1095  ls ~/go/pkg/linux_amd64/github.com/eugenioLeal/
+ 1096  vim ~/go/src/github.com/eugenioLeal/stringutil/reverse_test.go
+ 1097  go test github.com/eugenioLeal/stringutil/
+ 1098  go get github.com/golang/example/hello
+ 1099  ~/go/bin/hello
+ 1100  ls ~/go/bin/hello
+ 1101  ls ~/go/bin/
+ 1102  tree ~/go/
+ 1103  sudo apt install tree
+ 1104  tree ~/go/
+ 1105  cat github.com/golang/example/hello/hello.go 
+ 1106  sudo apt-get update
+ 1107  l
+ 1108  go version
+ 1109  go version
+ 1110  sudo apt-get update
+ 1111  ls
+ 1112  echo Hello World!
+ 1113  sudo apt-get update
+ 1114  ls
+ 1115  cd Documents/
+ 1116  cd Fonts/
+ 1117  ls
+ 1118  cd Blessed-Day/
+ 1119  ls
+ 1120  ls -la ~/
+ 1121  mkdir ~/.fonts
+ 1122  ls -la ~/
+ 1123  ls
+ 1124  cp BLESD___.otf ~/.fonts/
+ 1125  ls
+ 1126  ls ~/.fonts/
+ 1127  ls /tmp/Butter/
+ 1128  cd /tmp/Butter/8d7079433765b7eb641d7d37c861f6e832e2f53f/
+ 1129  ls
+ 1130  rm Girls\ Trip\ \(2017\)\ \[1080p\]\ \[YTS.AG\]/
+ 1131  cd Girls\ Trip\ \(2017\)\ \[1080p\]\ \[YTS.AG\]/
+ 1132  l
+ 1133  ls
+ 1134  cd ..
+ 1135  ls
+ 1136  rmdir Girls\ Trip\ \(2017\)\ \[1080p\]\ \[YTS.AG\]/
+ 1137  sudo apt-get update
+ 1138  sudo apt-get install blueman
+ 1139  blueman
+ 1140  sudo apt-get update
+ 1141  ls
+ 1142  cd Documents/
+ 1143  l
+ 1144  cd E-Book/
+ 1145  ls
+ 1146  cd Game-Of-Thrones/
+ 1147  ls
+ 1148  cd EPUB/
+ 1149  ls
+ 1150  xdg-open A\ Game\ Of\ Thrones\ -\ George\ RR\ Martin.epub 
+ 1151  sudo apt-get update
+ 1152  ls
+ 1153  cd Android/
+ 1154  l
+ 1155  cd ..
+ 1156  cd Documents/
+ 1157  l
+ 1158  cd Android/
+ 1159  l
+ 1160  cd ..
+ 1161  ls
+ 1162  cd ..
+ 1163  ls
+ 1164  cd ..
+ 1165  ls
+ 1166  cd usr/
+ 1167  l
+ 1168  cd local
+ 1169  l
+ 1170  cd android-studio/
+ 1171  l
+ 1172  cd bin/
+ 1173  l
+ 1174  cd ..
+ 1175  l
+ 1176  cd ~/Documents/
+ 1177  l
+ 1178  cd Udacity/
+ 1179  l
+ 1180  cd Android-Basics/
+ 1181  l
+ 1182  cd Documents/Udacity/Android-Basics/
+ 1183  mkdir Multiscreen-Apps
+ 1184  ls
+ 1185  cd User-Input/
+ 1186  ls
+ 1187  cd ..
+ 1188  cd User-Interface/
+ 1189  ls
+ 1190  cd ..
+ 1191  cd Multiscreen-Apps/
+ 1192  mkdir Miwok-App
+ 1193  cd Miwok-App/
+ 1194  git clone https://github.com/udacity/ud839_Miwok.git
+ 1195  ls
+ 1196  cd ud839_Miwok/
+ 1197  ls
+ 1198  cd ..
+ 1199  l
+ 1200  s
+ 1201  ls
+ 1202  mv ud839_Miwok/ ~/Documents/Udacity/Android-Basics/Multiscreen-Apps/Miwok-App/
+ 1203  ls
+ 1204  cd ..
+ 1205  mv Miwok-App/ Miwok-Errase/
+ 1206  ls
+ 1207  cd Miwok-Errase/
+ 1208  ls
+ 1209  mv ud839_Miwok/ ~/Documents/Udacity/Android-Basics/Multiscreen-Apps/Miwok-App/
+ 1210  ls
+ 1211  cd ..
+ 1212  ls
+ 1213  cd Miwok-App/
+ 1214  l
+ 1215  cd ..
+ 1216  ls
+ 1217  rmdir Miwok-Errase/
+ 1218  ls
+ 1219  cd Documents/
+ 1220  cd Advanced-Programming/
+ 1221  cd ..
+ 1222  atom Advanced-Programming/
+ 1223  cd Advanced-Programming/Matrix-Multiplication/
+ 1224  ls
+ 1225  gcc main.c 
+ 1226  ./a.out 
+ 1227  gcc main.c 
+ 1228  ./a.out 
+ 1229  gcc main.c 
+ 1230  ./a.out 
+ 1231  gcc main.c 
+ 1232  ./a.out 
+ 1233  gcc main.c 
+ 1234  ./a.out 
+ 1235  gcc main.c 
+ 1236  ./a.out 
+ 1237  gcc main.c 
+ 1238  ./a.out 
+ 1239  gcc main.c 
+ 1240  ./a.out 
+ 1241  gcc main.c 
+ 1242  ./a.out 
+ 1243  gcc main.c 
+ 1244  ./a.out 
+ 1245  gcc main.c 
+ 1246  ./a.out 
+ 1247  gcc main.c 
+ 1248  ./a.out 
+ 1249  gcc main.c 
+ 1250  ./a.out 
+ 1251  gcc main.c 
+ 1252  ./a.out 
+ 1253  gcc main.c 
+ 1254  ./a.out 
+ 1255  gcc main.c 
+ 1256  ./a.out 
+ 1257  gcc main.c 
+ 1258  ./a.out 
+ 1259  gcc main.c 
+ 1260  ./a.out 
+ 1261  gcc main.c 
+ 1262  ./a.out 
+ 1263  gcc main.c 
+ 1264  ./a.out 
+ 1265  gcc main.c 
+ 1266  ./a.out 
+ 1267  gcc main.c 
+ 1268  ./a.out 
+ 1269  gcc main.c 
+ 1270  ./a.out 
+ 1271  gcc main.c 
+ 1272  ./a.out 
+ 1273  gcc main.c 
+ 1274  ./a.out 
+ 1275  gcc main.c 
+ 1276  ./a.out 
+ 1277  gcc main.c 
+ 1278  ./a.out 
+ 1279  gcc main.c 
+ 1280  ./a.out 
+ 1281  gcc main.c 
+ 1282  ./a.out 
+ 1283  gcc main.c 
+ 1284  ./a.out 
+ 1285  gcc main.c 
+ 1286  ./a.out 
+ 1287  pkg install -forge octave
+ 1288  sudo pkg install -forge octave
+ 1289  sudo apt-get install octave
+ 1290  octave
+ 1291  cd Documents
+ 1292  atom Advanced-Programming/
+ 1293  cd Advanced-Programming/Matrix-Multiplication/
+ 1294  gcc main.c 
+ 1295  ./a.out 
+ 1296  gcc main.c 
+ 1297  ./a.out 
+ 1298  gcc main.c 
+ 1299  ./a.out 
+ 1300  gcc main.c 
+ 1301  ./a.out 
+ 1302  gcc main.c 
+ 1303  ./a.out 
+ 1304  gcc main.c 
+ 1305  ./a.out 
+ 1306  gcc main.c 
+ 1307  ./a.out 
+ 1308  gcc main.c 
+ 1309  ./a.out 
+ 1310  gcc main.c 
+ 1311  ./a.out 
+ 1312  gcc main.c 
+ 1313  ./a.out 
+ 1314  gcc main.c 
+ 1315  ./a.out 
+ 1316  gcc main.c 
+ 1317  ./a.out 
+ 1318  gcc main.c 
+ 1319  ./a.out 
+ 1320  gcc main.c 
+ 1321  ./a.out 
+ 1322  gcc main.c 
+ 1323  ./a.out 
+ 1324  gcc main.c 
+ 1325  ./a.out 
+ 1326  gcc main.c 
+ 1327  ./a.out 
+ 1328  gcc main.c 
+ 1329  ./a.out 
+ 1330  gcc main.c 
+ 1331  ./a.out 
+ 1332  gcc main.c 
+ 1333  ./a.out 
+ 1334  gcc main.c 
+ 1335  ./a.out 
+ 1336  gcc main.c 
+ 1337  ./a.out 
+ 1338  gcc main.c 
+ 1339  ./a.out 
+ 1340  gcc main.c 
+ 1341  ./a.out 
+ 1342  gcc main.c 
+ 1343  ./a.out 
+ 1344  gcc main.c 
+ 1345  ./a.out 
+ 1346  cd ..
+ 1347  cd Matrix-Multiplication/
+ 1348  gcc main.c 
+ 1349  cd Matrix-Multiplication/
+ 1350  ./a.out 
+ 1351  gcc main.c 
+ 1352  ./a.out 
+ 1353  gcc main.c 
+ 1354  ./a.out 
+ 1355  gcc main.c 
+ 1356  ./a.out 
+ 1357  gcc main.c 
+ 1358  ./a.out 
+ 1359  gcc main.c 
+ 1360  ./a.out 
+ 1361  gcc main.c 
+ 1362  ./a.out 
+ 1363  gcc main.c 
+ 1364  ./a.out 
+ 1365  gcc main.c 
+ 1366  ./a.out 
+ 1367  gcc main.c 
+ 1368  ./a.out 
+ 1369  gcc main.c 
+ 1370  ./a.out 
+ 1371  cd ..
+ 1372  cd Advanced-Programming/
+ 1373  echo "# Advanced-Programming" >> README.md
+ 1374  ls
+ 1375  git init
+ 1376  git add .
+ 1377  git commit -m "First Commit"
+ 1378  git config --global user.email "eugenio.leal.333@gmail.com"
+ 1379  git config --global user.name "eugenioLeal"
+ 1380  git commit -m "First Commit"
+ 1381  git remote add origin https://github.com/eugenioLeal/Advanced-Programming.git
+ 1382  git push -u origin master
+ 1383  gcc -v
+ 1384  git status
+ 1385  git add .
+ 1386  git commit -m "Added functions to remove duplicate code :zap:"
+ 1387  git push origin master
+ 1388  cd Documents/
+ 1389  l
+ 1390  mkdir Software-Analysis
+ 1391  git clone https://github.com/eugenioLeal/A01022983_AyMSS2018.git
+ 1392  ls
+ 1393  rm -r A01022983_AyMSS2018/
+ 1394  ls
+ 1395  cd Software-Analysis/
+ 1396  git clone https://github.com/eugenioLeal/A01022983_AyMSS2018.git
+ 1397  ls
+ 1398  cd A01022983_AyMSS2018/
+ 1399  ls
+ 1400  cd ..
+ 1401  atom Software-Analysis/
+ 1402  git status
+ 1403  cd Software-Analysis/A01022983_AyMSS2018/
+ 1404  ls
+ 1405  git status
+ 1406  git add .
+ 1407  git commit -m "First Commit :tada:"
+ 1408  git push origin master
+ 1409  java --help
+ 1410  java --version
+ 1411  java -version
+ 1412  cd ..
+ 1413  cd Software-Analysis/A01022983_AyMSS2018/
+ 1414  l
+ 1415  cd Actividades/
+ 1416  ls
+ 1417  cd A1.1.Clock/
+ 1418  l
+ 1419  g++ main.cpp 
+ 1420  ./a.out 
+ 1421  g++ main.cpp 
+ 1422  ./a.out 
+ 1423  g++ main.cpp 
+ 1424  ./a.out 
+ 1425  g++ main.cpp 
+ 1426  ./a.out 
+ 1427  git status
+ 1428  git add .
+ 1429  git commit -m "antes de 10:00am"
+ 1430  git push origin master
+ 1431  g++ main.cpp 
+ 1432  ./a.out 
+ 1433  g++ main.cpp 
+ 1434  ./a.out 
+ 1435  g++ main.cpp 
+ 1436  ./a.out 
+ 1437  g++ main.cpp 
+ 1438  ./a.out 
+ 1439  LS
+ 1440  ls
+ 1441  cd ..
+ 1442  ls
+ 1443  mkdir Advanced-Databases
+ 1444  cd Advanced-Databases/
+ 1445  l
+ 1446  git clone https://github.com/eugenioLeal/A01022983_BDA18.git
+ 1447  ls
+ 1448  cd A01022983_BDA18/
+ 1449  ls
+ 1450  mkdir Actividades
+ 1451  ls
+ 1452  mkdir Tareas
+ 1453  l
+ 1454  mkdir Evaluaciones
+ 1455  ls
+ 1456  mkdir Proyecto
+ 1457  l
+ 1458  git status
+ 1459  ls
+ 1460  vim README.md
+ 1461  git status
+ 1462  git add .
+ 1463  git commit -m "First Commit :tada:"
+ 1464  git push origin master
+ 1465  ls
+ 1466  cd ..
+ 1467  atom Advanced-Databases/
+ 1468  cd Advanced-Databases/
+ 1469  ls
+ 1470  A01022983_BDA18/
+ 1471  cd A01022983_BDA18/
+ 1472  ls
+ 1473  cd Actividades/
+ 1474  ls
+ 1475  A2.1.DBMS/
+ 1476  cd A2.1.DBMS/
+ 1477  l
+ 1478  ls
+ 1479  ls -la
+ 1480  xdg-open .~lock.A01022983.A2.1.DBMS.docx# 
+ 1481  ls
+ 1482  xdg-open A01022983_A2_1_DBMS.docx 
+ 1483  cd ..
+ 1484  cd Downloads/
+ 1485  l
+ 1486  mv A1.DBMS.docx ~/Documents/Advanced-Databases/A01022983_BDA18/Actividades/A2.1.DBMS/A01022983_A2_1_DBMS.docx
+ 1487  ls
+ 1488  cd ../Documents/Advanced-Databases/
+ 1489  ls
+ 1490  cd A01022983_BDA18/
+ 1491  git status
+ 1492  git add .
+ 1493  git commit -m "Added Activity2"
+ 1494  git push origin master
+ 1495  cd Documents/Advanced-Databases/A01022983_BDA18/Actividades/A2.1.DBMS/
+ 1496  git status
+ 1497  cd ..
+ 1498  git status
+ 1499  git add .
+ 1500  git commit -m "Clean up"
+ 1501  git push origin master 
+ 1502  cd Documents/Advanced-Programming/
+ 1503  cd ..
+ 1504  atom Advanced-Programming/
+ 1505  iwconfig
+ 1506  cd Documents/Fixing-Wi-Fi-Drivers/
+ 1507  ls
+ 1508  cd rtlwifi_new-master/
+ 1509  ls
+ 1510  make
+ 1511  sudo make install
+ 1512  sudo modprobe -rv rtl8723be
+ 1513  sudo modprobe -v rtl8723be ant_sel=2
+ 1514  sudo ip link set wlan0 up
+ 1515  sudo iw dev wlan0 scan
+ 1516  echo "options rtl8723be ant_sel=2" | sudo tee /etc/modprobe.d/50-rtl8723be.conf
+ 1517  cd Downloads/
+ 1518  ls
+ 1519  rm -r saves/
+ 1520  ls
+ 1521  sudo rm -r saves -f
+ 1522  ls
+ 1523  sudo mv PacketTracer71_64bit_linux /usr/local/PacketTracer71_64bit_linux/
+ 1524  ls
+ 1525  cd /usr/local
+ 1526  ls
+ 1527  cd PacketTracer71_64bit_linux/
+ 1528  ls
+ 1529  ./install 
+ 1530  cd Documents/
+ 1531  ls
+ 1532  cd Advanced-Programming/
+ 1533  cd ..
+ 1534  atom Advanced-Programming/
+ 1535  cd Advanced-Programming/
+ 1536  ls
+ 1537  cd Matrix-Multiplication
+ 1538  ls
+ 1539  gcc main.c 
+ 1540  ./a.out 
+ 1541  gcc main0.c 
+ 1542  ls
+ 1543  gcc -c main.c Matrices.c 
+ 1544  ls
+ 1545  gcc Matrices.o main.o 
+ 1546  ls
+ 1547  ./a.out 
+ 1548  gcc -c main.c Matrices.c 
+ 1549  ls
+ 1550  touch Makefile
+ 1551  cd Document
+ 1552  cd Documents/
+ 1553  l
+ 1554  cd Software-Analysis/
+ 1555  ls
+ 1556  atom A01022983_AyMSS2018/
+ 1557  cd A01022983_AyMSS2018/Actividades/
+ 1558  ls
+ 1559  cd A1.1.Clock/
+ 1560  ls
+ 1561  g++ main.cpp 
+ 1562  ./a.out 
+ 1563  g++ main.cpp 
+ 1564  ./a.out 
+ 1565  g++ main.cpp 
+ 1566  ./a.out 
+ 1567  g++ main.cpp 
+ 1568  ./a.out 
+ 1569  g++ main.cpp 
+ 1570  ./a.out 
+ 1571  g++ main.cpp 
+ 1572  ./a.out 
+ 1573  g++ main.cpp 
+ 1574  cd ..
+ 1575  git status
+ 1576  ls
+ 1577  mkdir Evaluaciones
+ 1578  mkdir Proyecto
+ 1579  git status
+ 1580  ls
+ 1581  git status
+ 1582  git add .
+ 1583  git commit -m "Corrected Singleton double deletion problem! :boom:"
+ 1584  git status
+ 1585  git push origin master
+ 1586  cd ../..
+ 1587  ls
+ 1588  cd Advanced-Programming/
+ 1589  ls
+ 1590  mkdir Numerical-Base-Conversions
+ 1591  ls
+ 1592  git status
+ 1593  ls
+ 1594  cd Numerical-Base-Conversions/
+ 1595  cd ..
+ 1596  atom Advanced-Programming/
+ 1597  cd Advanced-Programming/
+ 1598  ls
+ 1599  cd Numerical-Base-Conversions/
+ 1600  ls
+ 1601  gcc main.c 
+ 1602  ./a.out 
+ 1603  gcc main.c 
+ 1604  ./a.out -i 16 -o 2 23
+ 1605  gcc main.c 
+ 1606  ./a.out -i 16 -o 2 23
+ 1607  gcc main.c 
+ 1608  ./a.out -i 16 -o 2 23
+ 1609  gcc main.c 
+ 1610  ./a.out -i 16 -o 2 23
+ 1611  gcc main.c 
+ 1612  ./a.out -i 16 -o 2 23
+ 1613  gcc main.c 
+ 1614  ./a.out -i 16 -o 2 23
+ 1615  ./a.out -i 16 -o 2 -c foo
+ 1616  /a.out -i foo -o 2 -c foo
+ 1617  ls
+ 1618  ./a.out -i foo -o 2 -c foo
+ 1619  gcc main.c 
+ 1620  ./a.out -c foo
+ 1621  ./a.out -c foo 23 23
+ 1622  gcc main.c 
+ 1623  ./a.out -c foo 23 23
+ 1624  ./a.out -i foo 23 23
+ 1625  gcc main.c 
+ 1626  ./a.out -i foo 23 23
+ 1627  gcc main.c 
+ 1628  ./a.out -i foo 23 23
+ 1629  ./a.out -i 23
+ 1630  cd Documents/
+ 1631  ls
+ 1632  atom Advanced-Programming/
+ 1633  cd Advanced-Programming/
+ 1634  ls
+ 1635  cd Numerical-Base-Conversions/
+ 1636  ls
+ 1637  gcc main.c 
+ 1638  ./a.out -i 2
+ 1639  gcc main.c 
+ 1640  ./a.out -i 2
+ 1641  gcc main.c 
+ 1642  ./a.out -i
+ 1643  gcc main.c 
+ 1644  ./a.out -i
+ 1645  ./a.out -i 2 -o 8
+ 1646  gcc main.c 
+ 1647  ./a.out -i 2 -o 8
+ 1648  gcc main.c 
+ 1649  ./a.out -i 2 -o 8
+ 1650  gcc main.c 
+ 1651  ./a.out -i 2 -o 8
+ 1652  gcc main.c 
+ 1653  ./a.out -i 2 -o 8
+ 1654  ./a.out -o 8
+ 1655  gcc main.c 
+ 1656  ./a.out -o 8
+ 1657  gcc main.c 
+ 1658  ./a.out -o 8
+ 1659  ./a.out -i 23 -o 8
+ 1660  ./a.out -i 23
+ 1661  gcc main.c 
+ 1662  ./a.out -i 23 -o 8
+ 1663  gcc main.c 
+ 1664  ./a.out -i 23 -o 8
+ 1665  gcc main.c 
+ 1666  ./a.out -i 23 -o 8
+ 1667  gcc main.c 
+ 1668  ./a.out -i 23 -o 8
+ 1669  docker search db2
+ 1670  sudo docker search db2
+ 1671  sudo docker pull db2express-c
+ 1672  sudo docker pull ibmcon/db2express-c
+ 1673  sudo docker pull ibmcom/db2express-c
+ 1674  docker search mysql
+ 1675  sudo docker search mysql
+ 1676  sudo docker pull mysql
+ 1677  docker run -e MYSQL_ROOT_PASSWORD=eugenioleal -p 3306:3306 -v /Documents/Advanced-Databases:/var/lib/mysql --name mysql -d mysql:tag
+ 1678  sudo docker run -e MYSQL_ROOT_PASSWORD=eugenioleal -p 3306:3306 -v /Documents/Advanced-Databases:/var/lib/mysql --name mysql -d mysql:tag
+ 1679* sudo docker 
+ 1680  docker ps -a
+ 1681  sudo docker ps -a
+ 1682  sudo docker exec -it mysql bash
+ 1683  ls
+ 1684  cd Documents/
+ 1685  ls
+ 1686  cd Advanced-Databases/
+ 1687  ls
+ 1688  ls -la
+ 1689  docker exec -it mysql bash
+ 1690  sudo docker exec -it mysql bash
+ 1691  docker ps -a
+ 1692  sudo docker ps -a
+ 1693  docker cp mysqlsampledatabase.sql d3182b309253 :/var/lib/mysql
+ 1694  sudo docker cp mysqlsampledatabase.sql d3182b309253:/var/lib/mysql
+ 1695  docker exec -it mysql bash
+ 1696  sudo docker exec -it mysql bash
+ 1697  ls
+ 1698  ls -la
+ 1699  rm .sql
+ 1700  ls
+ 1701  history > A01022983_BDA18/Actividades/A3.1.StoredProc/history-of-commands-typed-in-class.txt

@@ -1,0 +1,10 @@
+-- "Crea los 3 triggers vistos en clase
+
+-- 1. Trigger para el salario mayor al 30%
+create trigger previene_incremento no cascade before update on employee referencing old as old_values new as new_values for each row mode db2sql when (new_values.salary > old_values.salary * 1.3) begin atomic signal sqlstate '56001' ('NOT PERMITTED'); end
+
+-- 2. Trigger para colocar órdenes de compra cuando sí hay suficientes productos
+create trigger hay_suficiente_producto no cascade before insert on order referencing new as new_values for each row mode db2sql when (new_values.cantidad > (select quantity from inventory where pid = new_values.pid)) begin atomic signal sqlstate '57001'; end
+
+-- 3. Trigger que reduce la cantidad de productos del inventario cuando la orden de compra cambia a delivered"
+create trigger update_compra after update on order referencing new as new_values old as old_values for each row mode db2sql when (new_values.estado = 'delivered' and old_values.estado = 'pending') begin atomic update inventory set quantity = quantity - new_values.cantidad where pid = new_values.pid; end

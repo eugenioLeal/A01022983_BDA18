@@ -1,0 +1,36 @@
+CREATE TABLE user (
+id INT NOT NULL,
+name VARCHAR(50) NOT NULL,
+address CLOB(1K) NOT NULL,
+phone_number VARCHAR(20) NOT NULL,
+coverage_type INT NOT NULL,
+policy_price DECIMAL(6,2) NOT NULL,
+coverage_start DATE NOT NULL,
+coverage_end DATE NOT NULL,
+car_brand VARCHAR(50) NOT NULL,
+car_model VARCHAR(50) NOT NULL,
+car_year INT NOT NULL,
+car_value DECIMAL(10,2) NOT NULL,
+car_engine BIGINT NOT NULL,
+car_serial BIGINT NOT NULL,
+sys_start TIMESTAMP(12) GENERATED ALWAYS AS ROW BEGIN NOT NULL,
+ sys_end TIMESTAMP(12) GENERATED ALWAYS AS ROW END NOT NULL,
+ trans_start TIMESTAMP(12) GENERATED ALWAYS AS TRANSACTION START ID,
+ PERIOD SYSTEM_TIME (sys_start, sys_end),
+PERIOD BUSINESS_TIME (coverage_start, coverage_end),
+PRIMARY KEY(id, BUSINESS_TIME WITHOUT OVERLAPS)
+)
+
+
+
+create trigger update_price after update on user  referencing old as old_values new as new_values for each row mode db2sql when (new_values.coverage_end!=old_values.coverage_end) begin atomic new_values.policy_price = old_values.policy_price/(datediff(old_values.coverage_end, old_values.coverage_start)*(datediff(new_values.coverage_end, new_values.coverage_start)
+
+
+create trigger coverage++ after update on user  referencing old as old_values new as new_values for each row mode db2sql when (new_values.coverage_type <old_values.coverage_type) begin atomic new_values.coverage_type = old_values.coverage_type ; end
+
+
+CREATE TABLE user_sys_history LIKE user
+
+ALTER TABLE user ADD VERSIONING USE HISTORY TABLE user_sys_history
+
+UPDATE from period

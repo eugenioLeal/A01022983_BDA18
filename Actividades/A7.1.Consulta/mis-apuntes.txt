@@ -1,0 +1,25 @@
+show index from orderdetails
+
+//borrar indice
+drop index ordernumberidx on orderdetails
+
+#describe orderdetails
+-- explain
+-- select * from orderdetails
+-- where quantityOrdered = 45
+
+-- drop index ordernumberidx on orderdetails
+
+-- creating index
+-- create index quantity_idx on orderdetails (quantityOrdered)
+
+-- Hacer una consulta que muestra todos los product_lines(textDescription) que ha comprado el cliente.
+-- hacer joins customer y orders customerNumber, orders y orderdetails orderNumber, orderdetails y products productCode.
+SELECT distinct productLine FROM orders JOIN orderdetails ON orders.orderNumber = orderdetails.orderNumber JOIN products ON orderdetails.productCode = products.productCode WHERE customerNumber = 112;
+
+
+-- Revisar con Explain el costo de la consulta(guardar screenshot)
+
+-- Agregar indices a la tabla con mayor costo
+
+-- Volver a revisar con explain(comparar)

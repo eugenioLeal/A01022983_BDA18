@@ -1,0 +1,62 @@
+# Select 1
+select * from orderdetails force index(indexOne) where orderLineNumber = 1 and quantityOrdered > 50;
+
+# Select 2
+select productCode from orderdetails force index(indexOne) where orderLineNumber = 1 and quantityOrdered > 50;
+
+# Select 3
+select  orderLineNumber, count(*) from orderdetails force index(indexOne) where orderLineNumber = 1 and quantityOrdered > 50 group by orderLineNumber;
+
+# Costo despues de crear index's
+
+# Index 1
+create index indexOne on orderdetails(orderLineNumber);
+
+# Index 2
+create index indexTwo on orderdetails(quantityOrdered, orderLineNumber);
+
+# Index 3
+create index indexThree on orderdetails(orderLineNumber, quantityOrdered);
+
+# Costo de selects sin indexar ("query_cost")
+select1 = "8.01"
+select2 = "3.02"
+select3 = "3.02"
+
+# Tabla Costo para cada index
+        | Select 1  | Select 2  | Select 3  |
+Index 1 | 95.20     | 95.20     | 95.20     |
+Index 2 | 93.41     | 27.62     | 27.62     |
+Index 3 | 8.01      | 3.02      | 3.02      |
+
+
+# Stored Prodcedure Cursor
+delimiter //
+create procedure demo_cursor()
+begin
+	declare ids int;
+    declare done int default FALSE;
+    declare cursor1 cursor for select actor_id from actor;
+    declare continue handler
+		for not found
+        set done = true;
+	
+    open cursor1;
+    read_loop: loop
+		fetch cursor1 into ids;
+        if done then
+			leave read_loop;
+		end if;
+        # set ids = id_actor;
+	end loop;
+		select ids;
+	close cursor1;
+end
+        
+# Mysql Error Handlers
+# continue
+# exit
+
+# sql states: SQLSTATE '02000', SQLCODE 350
+
+# Tarea: Modificar el film_title de la tabla film y colocarle en prefijo la categoria (name)

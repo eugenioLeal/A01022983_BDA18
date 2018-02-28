@@ -7,7 +7,7 @@
 -- Ejemplo clase    --
 ----------------------
 use classicmodels;
-Delimiter $$ 
+delimiter $$ 
 create procedure count_customers()
 BEGIN
     declare contador int default 0;

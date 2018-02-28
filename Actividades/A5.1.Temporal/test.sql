@@ -5,7 +5,7 @@ credits SMALLINT NOT NULL WITH DEFAULT 3,
 price decimal(6,2) NOT NULL,
 cstart date NOT NULL,
 cend date NOT NULL,
-period bussiness_time(cstart, cend),
+period business_time(cstart, cend),
 PRIMARY key(course_number, bussiness_time WITHOUT overlaps));
 
 -- insert values

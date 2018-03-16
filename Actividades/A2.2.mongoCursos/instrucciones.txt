@@ -1,0 +1,138 @@
+
+// Create collection
+
+db.createCollection("universidad")
+
+//------------------------//
+//-- Estructura de JSON --//
+//------------------------//
+// Imaginamos que ya tenemos estos datos inicialmente
+
+db.universidad.insert({
+    curso: [
+      {
+          titulo:"Geografia",
+          profesor_titular:"Pablo Perez",
+          anio_ofrece:"2017",
+          alumnos: [
+            {
+                nombre:"Jimena",
+                matricula:"A000000",
+                direccion:"principio 0",
+                genero:"femenino",
+                evaluaciones: {
+                    evaluacion_escrita: {
+                        numero_preguntas_teoricas:"",
+                        numero_preguntas_practicas:""
+                    },
+                    evaluacion_curso: "",
+                    evaluacion_profesor: ""
+                },
+                comentarios: "hola"
+            }
+          ]
+      }
+    ],
+    profesores: [
+      {
+        nombre:"Pablo Perez",
+        nomina:"10",
+        direccion:"calle 10",
+        genero:"masculino",
+        cursos_impartidos: [
+          {
+              titulo_curso:"Geografia",
+              anio_impartido:"2017"
+          }
+        ]
+      },
+      {
+        nombre:"Jorge Perez",
+        nomina:"11",
+        direccion:"calle 11",
+        genero:"masculino",
+        cursos_impartidos: [
+          {
+              titulo_curso:"Matematicas",
+              anio_impartido:"2017"
+          }
+        ]
+      }
+    ]
+})
+
+//--------------------------------------//
+//-- Inicio del anio se dan de alta   --//
+//-- los cursos, alumnos y profesores --//
+//--------------------------------------//
+
+// Dando de alta el curso de Matematicas con sus respectivos alumnos
+
+db.universidad.update(
+  {
+    _id: ObjectId("5aab1dda585f464cd44e7134")
+  },
+  {
+    $push: {
+      curso: {
+        titulo:"Matematicas",
+        profesor_titular:"Jorge Perez",
+        anio_ofrece:"2017",
+        alumnos: [
+          {
+            nombre:"Pepe",
+            matricula:"A0000",
+            direccion:"prueba1",
+            genero:"masculino",
+            evaluaciones: {
+                evaluacion_escrita: {
+                    numero_preguntas_teoricas:"",
+                    numero_preguntas_practicas:""
+                },
+                evaluacion_curso: "",
+                evaluacion_profesor: ""
+            },
+            comentarios: "comentario1"
+          },
+          {
+            nombre:"Juan",
+            matricula:"A0001",
+            direccion:"prueba2",
+            genero:"masculino",
+            evaluaciones: {
+                evaluacion_escrita: {
+                    numero_preguntas_teoricas:"",
+                    numero_preguntas_practicas:""
+                },
+                evaluacion_curso: "",
+                evaluacion_profesor: ""
+            },
+            comentarios: "comentario2"
+          }
+        ]
+      }
+    }
+  }
+)
+
+//----------------------------------//
+//-- Al Final del Anio            --//
+//-- Se registran calificaciones  --//
+//----------------------------------//
+// Registrando calificaciones de alumnos de Geografia
+// En este caso solo hay un alumno
+
+db.universidad.update(
+  {
+    "_id": ObjectId("5aab1dda585f464cd44e7134"),
+  },
+  {
+    $set:
+    {
+      "curso.0.alumnos.0.evaluaciones.evaluacion_escrita.numero_preguntas_teoricas": "11",
+      "curso.0.alumnos.0.evaluaciones.evaluacion_escrita.numero_preguntas_practicas": "20",
+      "curso.0.alumnos.0.evaluaciones.evaluacion_curso": "92",
+      "curso.0.alumnos.0.evaluaciones.evaluacion_profesor": "95"
+    }
+  }
+)

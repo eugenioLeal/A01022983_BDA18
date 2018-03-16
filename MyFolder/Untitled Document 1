@@ -1,0 +1,18 @@
+//Create a container for the Master
+
+sudo docker run --name mysqlmaster -v /home/eugenio/Documents/Advanced-Databases/Master-Configuration-File:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=master -d mysql:tag
+
+
+// Create a container for the Slave
+
+sudo docker run --name mysqlslave -v /home/eugenio/Documents/Advanced-Databases/Slave-Configuration-File:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=slave -d mysql:tag
+
+
+// This will use the same ip addresses using command ifconfig
+
+192.168.1.65- Master Database
+
+192.168.1.65- Slave Database
+
+
+

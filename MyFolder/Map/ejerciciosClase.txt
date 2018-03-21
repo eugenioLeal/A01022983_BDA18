@@ -1,0 +1,203 @@
+db.cliente.insert(
+  [
+    {
+      "name": "Peter",
+      "numProds": 75
+    },
+    {
+      "name": "Juan",
+      "numProds": 10
+    },
+    {
+      "name": "Pablo",
+      "numProds": 11
+    },
+    {
+      "name": "Pedro",
+      "numProds": 30
+    },
+    {
+      "name": "Peter",
+      "numProds": 41
+    },
+    {
+      "name": "Peter",
+      "numProds": 42
+    },
+    {
+      "name": "Peter",
+      "numProds": 50
+    },
+    {
+      "name": "Peter",
+      "numProds": 60
+    }
+  ]
+)
+
+
+var map1 = function() {
+  emit(this.name, this.numProds);
+};
+
+var reduce1 = function(name, values) {
+  var n = Array.sum(values);
+  return n;
+};
+
+db.cliente.mapReduce(map1, reduce1, {out:"res"})
+
+
+db.clientes2.insert(
+  [
+    {
+      name: "Peter",
+      numProds: 75,
+      details: [
+        {
+          prod: "prod1",
+          price: 200
+        },
+        {
+          prod: "prod2",
+          price: 300
+        }
+      ]
+    },
+    {
+      name: "Juan",
+      "numProds": 10,
+      details: [
+        {
+          prod: "prod1",
+          price: 140
+        },
+        {
+          prod: "prod2",
+          price: 289
+        }
+      ]
+    },
+    {
+      name: "Pablo",
+      numProds: 11,
+      details: [
+        {
+          prod: "prod1",
+          price: 21
+        },
+        {
+          prod: "prod2",
+          price: 23
+        }
+      ]
+    },
+    {
+      name: "Pedro",
+      numProds: 30,
+      details: [
+        {
+          prod: "prod1",
+          price: 92
+        },
+        {
+          prod: "prod2",
+          price: 3
+        },
+      ]
+    },
+    {
+      name: "Peter",
+      numProds: 41,
+      details: [
+        {
+          prod: "prod1",
+          price: 20
+        },
+        {
+          prod: "prod2",
+          price: 300
+        },
+      ]
+    },
+    {
+      name: "Peter",
+      numProds: 42,
+      details: [
+        {
+          prod: "prod1",
+          price: 200
+        },
+        {
+          prod: "prod2",
+          price: 300
+        },
+      ]
+    },
+    {
+      name: "Peter",
+      numProds: 50,
+      details: [
+        {
+          prod: "prod3",
+          price: 200
+        },
+        {
+          prod: "prod4",
+          price: 300
+        },
+      ]
+    },
+    {
+      name: "Peter",
+      numProds: 60,
+      details: [
+        {
+          prod: "prod3",
+          price: 200
+        },
+        {
+          prod: "prod4",
+          price: 300
+        },
+      ]
+    }
+  ]
+)
+
+Numero de Productos de details mapea. Reduce suma los precios de los diferentes productos
+
+// Map Function
+var mapCosts = function() {
+  this.details.forEach((value)=>{
+    emit(value.prod, value.price)
+  });
+};
+
+// Reduce Function
+var getCosts = function(prod, prices) {
+  return Array.sum(prices);
+};
+
+// Exito!
+db.clientes2.mapReduce(
+  mapCosts,
+  getCosts,
+  {
+    out:"res"
+  }
+)
+
+// Solo Peter
+db.clientes2.mapReduce(
+  mapCosts,
+  getCosts,
+  {
+    out:"res",
+    query: { name:"Peter" },
+    sort: { name:1 },
+    limit: 1
+  }
+)
+
+// Recuerda que puedes aplicarle .find() al resultado de map reduce

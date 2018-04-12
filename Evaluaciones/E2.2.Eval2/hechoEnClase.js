@@ -1,4 +1,3 @@
-
 // Importar JSON
 mongoimport -h localhost:27017 -d clase -c partial --file ~/Downloads/grades.json;
 

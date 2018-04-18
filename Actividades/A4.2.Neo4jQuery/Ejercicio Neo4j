@@ -1,0 +1,23 @@
+Ejercicio Neo4j
+
+Utilizando la base de datos Movies de ejemplo resuelve las siguientes
+preguntas:
+
+
+1. ¿Cuántos actores hay?
+MATCH (p:Person)-[r:ACTED_IN]->() RETURN p
+2. ¿cuántos productores hay?
+MATCH (p:Person)-[r:PRODUCED]->() RETURN p
+3. ¿cuántos directores hay?
+MATCH (p:Person)-[r:DIRECTED]->() RETURN p
+4. ¿cuántas películas hay?
+MATCH (m: Movie) RETURN m, count(m)
+5. ¿Quién ha escrito más películas?
+MATCH (p:Person)-[r:WROTE]->() RETURN p, count(r) ORDER BY count(r) DESC
+6. El top 5 de películas con el mejor Rating
+MATCH p = ()-[r:REVIEWED]->(m:Movie) RETURN m, avg(r.rating) AS rating ORDER BY rating DESC LIMIT 5
+7. ¿Qué personas debería conocer Al Pacino para que le presentaran a
+Audrey Tautou?
+
+8. ¿Qué actores que han producido y actuado en la misma película?
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie)<-[r2:PRODUCED]-(p) RETURN p

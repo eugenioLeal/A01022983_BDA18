@@ -4,20 +4,29 @@ Utilizando la base de datos Movies de ejemplo resuelve las siguientes
 preguntas:
 
 
-1. ¿Cuántos actores hay?
+1. ¿Cuántos actores hay? 204
 MATCH (p:Person)-[r:ACTED_IN]->() RETURN p
-2. ¿cuántos productores hay?
-MATCH (p:Person)-[r:PRODUCED]->() RETURN p
-3. ¿cuántos directores hay?
-MATCH (p:Person)-[r:DIRECTED]->() RETURN p
-4. ¿cuántas películas hay?
-MATCH (m: Movie) RETURN m, count(m)
-5. ¿Quién ha escrito más películas?
-MATCH (p:Person)-[r:WROTE]->() RETURN p, count(r) ORDER BY count(r) DESC
-6. El top 5 de películas con el mejor Rating
-MATCH p = ()-[r:REVIEWED]->(m:Movie) RETURN m, avg(r.rating) AS rating ORDER BY rating DESC LIMIT 5
-7. ¿Qué personas debería conocer Al Pacino para que le presentaran a
-Audrey Tautou?
 
-8. ¿Qué actores que han producido y actuado en la misma película?
+2. ¿cuántos productores hay? 16
+MATCH (p:Person)-[r:PRODUCED]->() RETURN p
+
+3. ¿cuántos directores hay? 56
+MATCH (p:Person)-[r:DIRECTED]->() RETURN p
+
+4. ¿cuántas películas hay? 76
+MATCH (m: Movie) RETURN m, count(m)
+
+5. ¿Quién ha escrito más películas? Lana y Lilly Wachowski
+MATCH (p:Person)-[r:WROTE]->() RETURN p, count(r) ORDER BY count(r) DESC
+
+6. El top 5 de películas con el mejor Rating 1. Cloud Atlas, 2. Jerry Maguire, 3. Unforgiven 4. The Replacements, 5. The Da Vinci Code
+MATCH ()-[r:REVIEWED]->(m:Movie) RETURN m, avg(r.rating) AS ratings ORDER BY ratings DESC
+
+7. ¿Qué personas debería conocer Al Pacino para que le presentaran a
+Audrey Tautou? Keanu Reeves, James Thompson
+
+MATCH p = shortestPath((al:Person{name:"Al Pacino"})-[*]-(au:Person{name:"Audrey Tautou"})) WITH nodes(p) AS nodes UNWIND nodes AS n WITH n WHERE "Person" IN labels(n) AND n.name <> "Audrey Tautou" AND n.name <> "Al Pacino" RETURN n
+
+8. ¿Qué actores que han producido y actuado en la misma película? Ninguno
+
 MATCH (p:Person)-[r:ACTED_IN]->(m:Movie)<-[r2:PRODUCED]-(p) RETURN p
